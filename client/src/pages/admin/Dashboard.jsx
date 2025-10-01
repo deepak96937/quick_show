@@ -4,6 +4,7 @@ import { dummyDashboardData } from '../../assets/assets';
 import Loading from '../../components/Loading';
 import Title from '../../components/admin/Title';
 import BlurCircle from '../../components/BlurCircle';
+import { dateFormat } from '../../lib/dateFormat';
 
 const Dashboard = () => {
 
@@ -65,6 +66,7 @@ const Dashboard = () => {
               <p className=' text-lg font-medium'>{currency}{show.showPrice}</p>
               <p className=' flex items-center gap-1 text-sm text-gray-400 mt-1 pr-1'><StarIcon className=' w-4 h-4 text-primary fill-primary'/>{show.movie.vote_average.toFixed(1)}</p>
             </div>
+            <p className=' px-2 pt-2 text-sm text-gray-500'>{dateFormat(show.showDateTime)}</p>
           </div>
         ))}
       </div>
